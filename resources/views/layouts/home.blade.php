@@ -16,8 +16,8 @@
 
     <? check availability  ?>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="{{asset('assets')}}/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('assets')}}/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="{{asset('assets')}}/font-awesome-4.7.0/css/font-awesome.min.css">    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('assets')}}/css/bootstrap.min.css">                          <!-- Bootstrap style -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/slick/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css/datepicker.css"/>

@@ -99,13 +99,15 @@
                     <li class="nav-item dropdown nav-user">
                         <a class="nav-link nav-user-img" href="{{ asset('assets')}}/admin/#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('assets')}}/admin/assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                         <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                            @auth
                             <div class="nav-user-info">
-                                <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
-                                <span class="status"></span><span class="ml-2">Available</span>
+
+                                <h5 class="mb-0 text-white nav-user-name">{{Auth::user()->name}} </h5>
                             </div>
                             <a class="dropdown-item" href="{{ asset('assets')}}/admin/#"><i class="fas fa-user mr-2"></i>Account</a>
                             <a class="dropdown-item" href="{{ asset('assets')}}/admin/#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                            <a class="dropdown-item" href="{{ asset('assets')}}/admin/#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            <a class="dropdown-item" href="{{ route('admin_logout') }}"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            @endauth
                         </div>
                     </li>
                 </ul>
