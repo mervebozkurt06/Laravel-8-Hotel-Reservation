@@ -111,7 +111,7 @@ button.btn-secondary:hover{
 	height: 100%;
 }
 .carousel-item {
-  height: 88vh;
+  height: 66vh; /* old data = 88vh */
   min-height: 300px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
