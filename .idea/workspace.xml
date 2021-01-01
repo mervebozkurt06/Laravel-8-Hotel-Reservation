@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8d493f6-582c-4326-b929-04ecff6c6b0a" name="Default Changelist" comment="Authentication,Logged Out">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,21 +180,29 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\admin" />
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
       <recent name="C:\Php\LaravelHotelReservationProject\app\Http\Controllers" />
       <recent name="C:\Php\LaravelHotelReservationProject\app\Http\Controllers\front" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\admin" />
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug._blank.blade.php">
+    <configuration name="_blank.blade.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LaravelHotelReservationProject/resources/views/admin/_blank.blade.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug._blank.blade.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -213,7 +223,9 @@
       <workItem from="1608987388005" duration="38000" />
       <workItem from="1608987768581" duration="14821000" />
       <workItem from="1609147402204" duration="4054000" />
-      <workItem from="1609151742456" duration="5121000" />
+      <workItem from="1609151742456" duration="5260000" />
+      <workItem from="1609262263660" duration="1138000" />
+      <workItem from="1609501221395" duration="7102000" />
     </task>
     <task id="LOCAL-00001" summary="Index updated">
       <created>1608987855631</created>
@@ -250,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609151459056</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Categor List(Admin Panel)">
+      <created>1609171697889</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609171697889</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +294,8 @@
     <MESSAGE value="check availability added from another template" />
     <MESSAGE value="Authentication,Logged Out" />
     <MESSAGE value="Database Transactions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Database Transactions" />
+    <MESSAGE value="Categor List(Admin Panel)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Categor List(Admin Panel)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="722" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609092468713">
@@ -306,10 +326,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608987427262" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609151467537">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609171776420">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609151467537" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609171776420" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1609092438094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

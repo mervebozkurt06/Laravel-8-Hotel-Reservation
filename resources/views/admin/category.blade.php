@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="page-header">
-                        <h2 class="pageheader-title">Categories </h2>
+                        <h2 class="pageheader-title">Category List </h2>
                         <div class="page-breadcrumb">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -32,30 +32,14 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="mb-0">Category List</h5>
+                            <a href="{{route('admin_category_add')}}" class="btn btn-primary">Add Category</a>
+
 
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <div id="example3_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                                    <div class="row"><div class="col-sm-12 col-md-6">
-                                            <div class="dataTables_length" id="example3_length">
-                                                <label>Show
-                                                    <select name="example3_length" aria-controls="example3" class="custom-select custom-select-sm form-control form-control-sm">
-                                                        <option value="10">10</option><option value="25">25</option>
-                                                        <option value="50">50</option><option value="100">100</option>
-                                                    </select> entries
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 col-md-6">
-                                            <div id="example3_filter" class="dataTables_filter">
-                                                <label>Search:
-                                                    <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example3">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div class="row">
                                         <div class="col-sm-12"><table id="example3" class="table table-striped table-bordered dataTable" style="width: 100%;" role="grid" aria-describedby="example3_info">
                                                 <thead>
@@ -77,7 +61,7 @@
                                                         <td>{{$rs->parent_id}}</td>
                                                         <td>{{$rs->status}}</td>
                                                         <td>Edit</td>
-                                                        <td>Delete</td>
+                                                        <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Are you sure?')">Delete</a></td>
                                                     </tr>
                                                 @endforeach
                                                 </tbody>
