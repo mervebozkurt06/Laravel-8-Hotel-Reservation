@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Category List')
+@section('title','Hotel List')
 
 @section('content')
 
@@ -12,12 +12,12 @@
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="page-header">
-                        <h2 class="pageheader-title">Category List </h2>
+                        <h2 class="pageheader-title">Hotel List </h2>
                         <div class="page-breadcrumb">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Category</a></li>
+                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Hotel</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -32,7 +32,7 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <a href="{{route('admin_category_add')}}" class="btn btn-primary">Add Category</a>
+                            <a href="{{route('admin_hotel_add')}}" class="btn btn-primary">Add Hotel</a>
 
 
                         </div>
@@ -45,10 +45,13 @@
                                                 <thead>
                                                 <tr role="row">
                                                     <th class="sorting_asc" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 70px;">Id</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 111px;">Title</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 49px;">Parent</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Status</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 50px;">Edit</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 111px;">Category</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 49px;">Title</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Image</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Star</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Email</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 50px;">Status</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 52px;">Actions</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 52px;">Delete</th>
                                                 </tr>
                                                 </thead>
@@ -57,20 +60,24 @@
                                                 @foreach($datalist as $rs)
                                                     <tr role="row" class="odd">
                                                         <td >{{$rs->id}}</td>
-                                                        <td >{{$rs->title}}</td>
-                                                        <td>{{$rs->parent_id}}</td>
+                                                        <td >{{$rs->category_id}}</td>
+                                                        <td>{{$rs->title}}</td>
+                                                        <td>{{$rs->image}}</td>
+                                                        <td>{{$rs->star}}</td>
+                                                        <td>{{$rs->email}}</td>
                                                         <td>{{$rs->status}}</td>
-                                                        <td><a href="{{route('admin_category_edit',['id'=>$rs->id])}}">Edit</a></td>
-                                                        <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Are you sure?')">Delete</a></td>
+                                                        <td><a href="{{route('admin_hotel_edit',['id'=>$rs->id])}}">Edit</a></td>
+                                                        <td><a href="{{route('admin_hotel_delete',['id'=>$rs->id])}}" onclick="return confirm('Are you sure?')">Delete</a></td>
                                                     </tr>
                                                 @endforeach
                                                 </tbody>
 
+                                                <tfoot>
 
+                                                </tfoot>
                                             </table>
                                         </div>
                                     </div>
-
 
                                 </div>
                             </div>
