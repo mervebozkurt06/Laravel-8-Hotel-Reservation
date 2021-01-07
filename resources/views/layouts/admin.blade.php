@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('assets')}}/admin/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="{{ asset('assets')}}/admin/assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="{{ asset('assets')}}/admin/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+
     @yield('css')
     @yield('javascript')
 

@@ -51,6 +51,7 @@ class HotelController extends Controller
         $data->user_id = Auth::id();
         $data->star = $request->input('star');
         $data->address = $request->input('address');
+        $data->detail = $request->input('detail');
         $data->phone = $request->input('phone');
         $data->fax = $request->input('fax');
         $data->email = $request->input('email');
@@ -107,6 +108,7 @@ class HotelController extends Controller
         $data->user_id = Auth::id();
         $data->star = $request->input('star');
         $data->address = $request->input('address');
+        $data->detail = $request->input('detail');
         $data->phone = $request->input('phone');
         $data->fax = $request->input('fax');
         $data->email = $request->input('email');

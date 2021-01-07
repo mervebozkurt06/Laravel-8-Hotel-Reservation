@@ -29,6 +29,7 @@ class CreateHotelsTable extends Migration
             $table->string('city',20)->nullable();
             $table->string('country',30)->nullable();
             $table->string('location',50)->nullable();
+            $table->text('detail')->nullable();
             $table->string('slug',100)->nullable();
             $table->string('status',5)->nullable()->default('False');
 
