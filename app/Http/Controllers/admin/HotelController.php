@@ -8,6 +8,7 @@ use App\Models\Hotel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class HotelController extends Controller
 {
@@ -59,6 +60,8 @@ class HotelController extends Controller
         $data->country = $request->input('country');
         $data->location = $request->input('location');
         $data->email = $request->input('email');
+        $data->image = Storage::putFile('images',$request->file('image')); // file upload
+
         $data->save();
         return redirect()->route('admin_hotels');
     }
@@ -116,6 +119,8 @@ class HotelController extends Controller
         $data->country = $request->input('country');
         $data->location = $request->input('location');
         $data->email = $request->input('email');
+        $data->image = Storage::putFile('images',$request->file('image')); // file upload
+
         $data->save();
         return redirect()->route('admin_hotels');
     }

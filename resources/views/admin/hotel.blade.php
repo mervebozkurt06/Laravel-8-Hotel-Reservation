@@ -45,9 +45,9 @@
                                                 <thead>
                                                 <tr role="row">
                                                     <th class="sorting_asc" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 70px;">Id</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Image</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 111px;">Category</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 49px;">Title</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Image</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Star</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Email</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 50px;">Status</th>
@@ -60,9 +60,13 @@
                                                 @foreach($datalist as $rs)
                                                     <tr role="row" class="odd">
                                                         <td >{{$rs->id}}</td>
+                                                        <td>
+                                                            @if($rs->image)
+                                                                <img src="{{ Storage::url($rs->image) }}" height="30" alt="">
+                                                            @endif
+                                                        </td>
                                                         <td >{{$rs->category_id}}</td>
                                                         <td>{{$rs->title}}</td>
-                                                        <td>{{$rs->image}}</td>
                                                         <td>{{$rs->star}}</td>
                                                         <td>{{$rs->email}}</td>
                                                         <td>{{$rs->status}}</td>

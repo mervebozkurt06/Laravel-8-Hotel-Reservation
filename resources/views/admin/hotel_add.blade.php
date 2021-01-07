@@ -44,7 +44,7 @@
                     <div class="card">
                         <h5 class="card-header">Basic Form</h5>
                         <div class="card-body">
-                            <form action="{{route('admin_hotel_store')}}" method="post" id="basicform" data-parsley-validate="" novalidate="">
+                            <form action="{{route('admin_hotel_store')}}" method="post" id="basicform" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label>Parent</label>
@@ -57,13 +57,12 @@
                                     </select>
 
                                 </div>
-                                {{--
 
                                 <div class="custom-file mb-3">
                                     <input type="file" name="image" class="custom-file-input" id="customFile">
-                                    <label class="custom-file-label" for="customFile">File Input</label>
+                                    <label class="custom-file-label" for="customFile">Image</label>
                                 </div>
-                                --}}
+
                                 <div class="form-group">
                                     <label>Title</label>
                                     <input type="text" name="title" data-parsley-trigger="change"   autocomplete="off" class="form-control">
