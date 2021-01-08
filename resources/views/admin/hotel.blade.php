@@ -46,6 +46,7 @@
                                                 <tr role="row">
                                                     <th class="sorting_asc" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 70px;">Id</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Image</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Image Gallery</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 111px;">Category</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 49px;">Title</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Star</th>
@@ -65,13 +66,21 @@
                                                                 <img src="{{ Storage::url($rs->image) }}" height="30" alt="">
                                                             @endif
                                                         </td>
+                                                        <td ><a href="{{route('admin_image_add',['hotel_id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100, height=700')">
+                                                                <img src="{{asset('assets/admin/images')}}/gallery.png" height="30"></a> </td>
                                                         <td >{{$rs->category_id}}</td>
                                                         <td>{{$rs->title}}</td>
                                                         <td>{{$rs->star}}</td>
                                                         <td>{{$rs->email}}</td>
                                                         <td>{{$rs->status}}</td>
-                                                        <td><a href="{{route('admin_hotel_edit',['id'=>$rs->id])}}">Edit</a></td>
-                                                        <td><a href="{{route('admin_hotel_delete',['id'=>$rs->id])}}" onclick="return confirm('Are you sure?')">Delete</a></td>
+                                                        <td>
+                                                            <a href="{{route('admin_hotel_edit',['id'=>$rs->id])}}">
+                                                                <img src="{{asset('assets/admin/images')}}/edit.png" height="30"></a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="{{route('admin_hotel_delete',['id'=>$rs->id])}}" onclick="return confirm('Are you sure?')">
+                                                                <img src="{{asset('assets/admin/images')}}/delete.png" height="30"></a>
+                                                        </td>
                                                     </tr>
                                                 @endforeach
                                                 </tbody>

@@ -20,12 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8d493f6-582c-4326-b929-04ecff6c6b0a" name="Default Changelist" comment="Authentication,Logged Out">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ImageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_07_191616_create_images_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_07_192013_image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/admin/images/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/admin/images/delete.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/admin/images/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/admin/images/gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/HotelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/HotelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/hotel_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,14 +187,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\admin" />
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
       <recent name="C:\Php\LaravelHotelReservationProject\app\Http\Controllers" />
       <recent name="C:\Php\LaravelHotelReservationProject\app\Http\Controllers\front" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\admin" />
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug._blank.blade.php">
@@ -230,7 +236,8 @@
       <workItem from="1609607372012" duration="3705000" />
       <workItem from="1609689558887" duration="8519000" />
       <workItem from="1610011453391" duration="1258000" />
-      <workItem from="1610012725927" duration="5660000" />
+      <workItem from="1610012725927" duration="12197000" />
+      <workItem from="1610099688733" duration="2279000" />
     </task>
     <task id="LOCAL-00001" summary="Index updated">
       <created>1608987855631</created>
@@ -302,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610018075901</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Hotel Image Upload and Display">
+      <created>1610019873323</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1610019873323</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +346,8 @@
     <MESSAGE value="Edit Category" />
     <MESSAGE value="Hotels CRUD" />
     <MESSAGE value="Hotel Detail Rich Text Editor(summernote)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hotel Detail Rich Text Editor(summernote)" />
+    <MESSAGE value="Hotel Image Upload and Display" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hotel Image Upload and Display" />
   </component>
   <component name="WindowStateProjectService">
     <state x="722" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609092468713">
@@ -367,13 +382,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608987427262" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610018085939">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610019880850">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610018085939" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610019880850" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1609092438094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1536.824@0.0.1536.824" timestamp="1609092438094" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1610053434951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1610053434951" />
   </component>
 </project>

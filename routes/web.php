@@ -46,6 +46,15 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('show',[\App\Http\Controllers\Admin\HotelController::class,'show'])->name('admin_hotel_show');
 
     });
+    //Hotel Image Gallery
+    Route::prefix('image')->group(function (){
+        //Route assigned name "admin.user".
+        Route::get('create/{hotel_id}',[\App\Http\Controllers\Admin\ImageController::class,'create'])->name('admin_image_add'); //hotel id
+        Route::post('store/{hotel_id}',[\App\Http\Controllers\Admin\ImageController::class,'store'])->name('admin_image_store'); //hotel id
+        Route::get('delete/{id}/{hotel_id}',[\App\Http\Controllers\Admin\ImageController::class,'destroy'])->name('admin_image_delete'); //image id
+        Route::get('show',[\App\Http\Controllers\Admin\ImageController::class,'show'])->name('admin_image_show');
+
+    });
 
 });
 
