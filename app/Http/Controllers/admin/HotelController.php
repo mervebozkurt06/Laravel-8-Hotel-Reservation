@@ -119,8 +119,10 @@ class HotelController extends Controller
         $data->country = $request->input('country');
         $data->location = $request->input('location');
         $data->email = $request->input('email');
-        $data->image = Storage::putFile('images',$request->file('image')); // file upload
-
+        if($request->file('image')!=null)
+        {
+            $data->image = Storage::putFile('images',$request->file('image')); // file upload
+        }
         $data->save();
         return redirect()->route('admin_hotels');
     }

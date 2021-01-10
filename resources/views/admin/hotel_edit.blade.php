@@ -61,13 +61,15 @@
 
 
                                 <div class="custom-file mb-3">
-                                    <input type="file" name="image" value="{{$data->image}}" class="custom-file-input" id="customFile">
-                                    <label class="custom-file-label" for="customFile">Image</label>
+                                    <input type="file" name="image"  class="custom-file-input" id="customFile">
+                                    <label class="custom-file-label" for="customFile"><i>Choose Image...</i></label>
+                                    <div class="row">
 
-                                    @if($data->image)
-                                        <img src="{{Storage::url($data->image)}}" height="60" alt="">
-                                    @endif
+                                        @if($data->image)
+                                            <img src="{{Storage::url($data->image)}}" height="60" alt="">
+                                        @endif
 
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
