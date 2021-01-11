@@ -52,7 +52,9 @@
                                     <select name="category_id" class="form-control" >
 
                                         @foreach($datalist as $rs)
-                                            <option value="{{$rs->id}}"  @if($rs->id == $data->category_id) selected="selected" @endif> {{$rs->title}}</option>
+                                            <option value="{{$rs->id}}"  @if($rs->id == $data->parent_id) selected="selected" @endif>
+                                                {{ \App\Http\Controllers\admin\CategoryController::getParentsTree($rs,$rs->title) }}
+                                            </option>
 
                                         @endforeach
                                     </select>
@@ -148,26 +150,16 @@
                                         <option>False</option>
                                     </select>
                                 </div>
-
-
-
-
-
                                 <div class="row">
                                     <div class="col-sm-6 pl-0">
                                         <p class="text-right">
                                             <button type="submit" class="btn btn-space btn-primary">Update hotel</button>
-
                                         </p>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-
-
-
-
 
                 </div>
             </div>

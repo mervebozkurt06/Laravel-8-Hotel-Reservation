@@ -41,11 +41,11 @@
                                 <div class="form-group">
                                     <label>Parent</label>
 
-                                    <select name="parent_id" class="form-control" id="input-select">
+                                    <select name="parent_id" class="form-control">
                                         <option value="0">Main Category</option>
 
                                         @foreach($datalist as $rs)
-                                            <option value="{{$rs->id}}">{{$rs->title}}</option>
+                                            <option value="{{$rs->id}}">{{ \App\Http\Controllers\admin\CategoryController::getParentsTree($rs,$rs->title) }}</option>
                                         @endforeach
                                     </select>
 

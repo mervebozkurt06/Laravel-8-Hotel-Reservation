@@ -36,7 +36,7 @@
                     <div class="card">
                         <h5 class="card-header">Basic Form</h5>
                         <div class="card-body">
-                            <form action="{{route('admin_category_update',['id'=>$data->id])}}" method="post" id="basicform" data-parsley-validate="" novalidate="">
+                            <form action="{{route('admin_category_update',['id'=>$data->id])}}" method="post" id="basicform" >
                                 @csrf
                                 <div class="form-group">
                                     <label>Parent</label>
@@ -45,7 +45,9 @@
 
                                         <option value="0">Main Category</option>
                                         @foreach($datalist as $rs)
-                                            <option value="{{$rs->id}}"  @if($rs->id == $data->parent_id) selected="selected" @endif> {{$rs->title}}</option>
+                                            <option value="{{$rs->id}}"  @if($rs->id == $data->parent_id) selected="selected" @endif>
+                                                {{ \App\Http\Controllers\admin\CategoryController::getParentsTree($rs,$rs->title) }}
+                                            </option>
                                         @endforeach
                                     </select>
 

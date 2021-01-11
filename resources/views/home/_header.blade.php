@@ -7,8 +7,41 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fas fa-bars"></span>
         </button>
+
+        @php
+            $parentCategories = \App\Http\Controllers\HomeController::categoryList()
+        @endphp
+
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
+
             <ul class="navbar-nav ml-auto">
+
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hotels
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                            @foreach($parentCategories as $rs)
+
+                            <div>
+                                {{$rs->title}}
+                                <div>
+                                    @if(count($rs->children))
+                                        @include('home.categorytree',['children'=>$rs->children])
+                                    @endif
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+
+                    </li>
+
+
+
                 <li class="nav-item">
                     <a class="nav-link active" href="index.html">Home</a>
                 </li>
@@ -18,18 +51,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="services.html">Services</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Portfolio
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                        <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
-                        <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
-                        <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
-                        <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-                        <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-                    </div>
-                </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Blog

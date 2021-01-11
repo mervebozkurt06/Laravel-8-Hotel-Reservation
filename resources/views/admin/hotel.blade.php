@@ -68,7 +68,9 @@
                                                         </td>
                                                         <td ><a href="{{route('admin_image_add',['hotel_id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100, height=700')">
                                                                 <img src="{{asset('assets/admin/images')}}/gallery.png" height="30"></a> </td>
-                                                        <td >{{$rs->category->title}}</td>
+                                                        <td >
+                                                            {{ \App\Http\Controllers\admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}
+                                                        </td>
                                                         <td>{{$rs->title}}</td>
                                                         <td>{{$rs->star}}</td>
                                                         <td>{{$rs->email}}</td>

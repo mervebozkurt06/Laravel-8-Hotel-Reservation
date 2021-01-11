@@ -41,12 +41,13 @@
                                 <div id="example3_wrapper" class="dataTables_wrapper dt-bootstrap4">
 
                                     <div class="row">
-                                        <div class="col-sm-12"><table id="example3" class="table table-striped table-bordered dataTable" style="width: 100%;" role="grid" aria-describedby="example3_info">
+                                        <div class="col-sm-12">
+                                            <table id="example3" class="table table-striped table-bordered dataTable" style="width: 100%;" role="grid" aria-describedby="example3_info">
                                                 <thead>
                                                 <tr role="row">
                                                     <th class="sorting_asc" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 70px;">Id</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 111px;">Title</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 49px;">Parent</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 111px;">Parent</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 49px;">Title</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Status</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 50px;">Edit</th>
                                                     <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 52px;">Delete</th>
@@ -57,8 +58,10 @@
                                                 @foreach($datalist as $rs)
                                                     <tr role="row" class="odd">
                                                         <td >{{$rs->id}}</td>
-                                                        <td >{{$rs->title}}</td>
-                                                        <td>{{$rs->parent_id}}</td>
+                                                        <td >
+                                                            {{App\Http\Controllers\admin\CategoryController::getParentsTree($rs,$rs->title)}}
+                                                        </td>
+                                                        <td>{{$rs->title}}</td>
                                                         <td>{{$rs->status}}</td>
                                                         <td><a href="{{route('admin_category_edit',['id'=>$rs->id])}}">Edit</a></td>
                                                         <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Are you sure?')">Delete</a></td>
