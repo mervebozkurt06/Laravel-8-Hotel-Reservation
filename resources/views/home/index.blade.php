@@ -1,10 +1,13 @@
+@php
+    $setting = \App\Http\Controllers\HomeController::getSetting();
+@endphp
+
+
 @extends('layouts.home')
 
-@section('title','Laravel Hotel Reservation')
-@section('description')
-    Click -> For Online Hotel Reservation
-@endsection
+@section('title',$setting->title)
+@section('description'){{ $setting->description }}@endsection
 
-@section('keywords','Airbnb','Hotel','hostel','vacation')
+@section('keywords',$setting->keywords)
 
 

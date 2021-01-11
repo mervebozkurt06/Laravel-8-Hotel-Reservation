@@ -17,11 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
-Route::redirect('/', '/home');
-Route::get('/home', function () {
-    return view('home.index');
-});
+Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/home',[HomeController::class,'index'])->name('homepage');
 Route::get('/aboutus',[HomeController::class,'aboutus'])->name('aboutus');
+Route::get('/faq',[HomeController::class,'faq'])->name('faq');
+Route::get('/contact',[HomeController::class,'contact'])->name('contact');
+Route::get('/references',[HomeController::class,'references'])->name('references');
 
 //   /Admin(adding prefix like admin/category/add...)
 Route::middleware('auth')->prefix('admin')->group(function (){
@@ -70,7 +71,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 Route::get('/admin', [\App\Http\Controllers\Admin\HomeController::class,'index'])->name('admin_home')->middleware('auth');
 Route::get('/admin/login', [HomeController::class,'login'])->name('admin_login');
 Route::post('/admin/logincheck', [HomeController::class,'logincheck'])->name('admin_logincheck');
-Route::get('/admin/logout', [HomeController::class,'logout'])->name('admin_logout');
+Route::get('/logout', [HomeController::class,'logout'])->name('logout');
 
 
 

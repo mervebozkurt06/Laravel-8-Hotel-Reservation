@@ -1,3 +1,6 @@
+@php
+    $setting = \App\Http\Controllers\HomeController::getSetting();
+@endphp
 <!--footer starts from here-->
 <footer class="footer">
     <div class="container bottom_border">
@@ -5,26 +8,26 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col">
                 <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
                 <!--headin5_amrc-->
-                <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
-                <p><i class="fa fa-phone"></i> +91-9999878398 </p>
-                <p><i class="fa fa fa-envelope"></i> info@example.com </p>
+                <p class="mb10">{{$setting->address}}</p>
+                <p><i class="fa fa-location-arrow"></i> {{$setting->location}} </p>
+                <p><i class="fa fa-phone"></i> {{$setting->phone}} </p>
+                <p><i class="fa fa fa-envelope"></i> {{$setting->email}} </p>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col">
                 <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
                 <!--headin5_amrc ends here-->
                 <ul class="footer_ul2_amrc">
                     <li>
-                        <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                        <p>Lorem Ipsum is simply dummy printing...<a href="#">https://www.lipsum.com/</a></p>
+                        <a href="#"><i class="fab fa-facebook fleft padding-right"></i> </a>
+                        <p>Facebook...<a href="#">{{$setting->facebook}}</a></p>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram fleft padding-right"></i> </a>
+                        <p>Instagram...<a href="#">{{$setting->instagram}}</a></p>
                     </li>
                     <li>
                         <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                        <p>Lorem Ipsum is simply dummy printing...<a href="#">https://www.lipsum.com/</a></p>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                        <p>Lorem Ipsum is simply dummy printing...<a href="#">https://www.lipsum.com/</a></p>
+                        <p>Twitter...<a href="#">{{$setting->twitter}}</a></p>
                     </li>
                 </ul>
                 <!--footer_ul2_amrc ends here-->
@@ -36,7 +39,7 @@
                     <li><a href="#">Default Version</a></li>
                     <li><a href="#">Boxed Version</a></li>
                     <li><a href="#">Our Team </a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="{{route('aboutus')}}">About Us</a></li>
                     <li><a href="#">Our Services</a></li>
                     <li><a href="#">Get In Touch</a></li>
                 </ul>
@@ -80,17 +83,17 @@
     </div>
     <div class="container">
         <div class="footer-logo">
-            <a href="#"><img src="{{asset('assets')}}/images/footer-logo.png" alt="" /></a>
+            <a href="{{route('home')}}"><img src="{{asset('assets')}}/images/footer-logo.png" alt="" /></a>
         </div>
         <!--foote_bottom_ul_amrc ends here-->
-        <p class="copyright text-center">All Rights Reserved. &copy; 2018 <a href="#">N & LW Lawn Care</a> Design By :
-            <a href="https://html.design/">html design</a>
+        <p class="copyright text-center">All Rights Reserved| {{$setting->company}}
+
         </p>
         <ul class="social_footer_ul">
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            @if($setting->facebook != null)<li><a href="{{$setting->facebook}}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>@endif
+            @if($setting->twitter != null)<li><a href="{{$setting->twitter}}" target="_blank"><i class="fab fa-twitter"></i></a></li>@endif
+            @if($setting->youtube != null)<li><a href="{{$setting->youtube}}" target="_blank"><i class="fab fa-linkedin"></i></a></li>@endif
+            @if($setting->instagram != null)<li><a href="{{$setting->instagram}}" target="_blank"><i class="fab fa-instagram"></i></a></li>@endif
         </ul>
         <!--social_footer_ul ends here-->
     </div>
