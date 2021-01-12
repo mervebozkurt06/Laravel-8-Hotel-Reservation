@@ -42,9 +42,6 @@
                     <a class="nav-link" href="{{route('aboutus')}}">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('home')}}">Campains</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{{route('home')}}">New hotels</a>
                 </li>
 
@@ -72,18 +69,23 @@
                     <a class="nav-link" href="{{route('contact')}}">Contact</a>
                 </li>
                 <li class="nav-item dropdown">
+
                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        LOGIN
+                        @if (Auth::guest())LOGIN @else My Account @endif
+
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                        @auth()
-                        <a class="dropdown-item" href="blog-post.html">{{ Auth::user()->name }}</a>
-                        <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
-                        @endauth
-                        @guest()
-                        <a class="dropdown-item" href="/login">Login</a>
-                        <a class="dropdown-item" href="{{route('register')}}">Join</a>
-                            @endguest
+                        @if (Auth::guest())
+                            <a class="dropdown-item" href="/login">Login</a>
+                            <a class="dropdown-item" href="{{route('register')}}">Join</a>
+                        @else
+                            <a class="dropdown-item" href="{{route('myprofile')}}">{{ Auth::user()->name }}</a>
+                            <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
+                        @endif
+
+
+
+
                     </div>
                 </li>
 

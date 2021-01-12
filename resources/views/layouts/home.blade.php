@@ -30,9 +30,11 @@
 <body>
 @include('home._header')
 
-@include('home._slider')
 
-@include('home._content')
+
+@section('content')
+
+@show
 
 @include('home._footer')
 
