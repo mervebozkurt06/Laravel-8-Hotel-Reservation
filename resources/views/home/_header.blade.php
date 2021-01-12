@@ -39,21 +39,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('aboutus')}}">About Us</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{{route('home')}}">New hotels</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{{route('references')}}" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        References
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                        <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-                        <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-                        <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-                    </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="{{route('faq')}}" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,7 +52,13 @@
                     </div>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{route('aboutus')}}">About Us</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{route('contact')}}">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('references')}}">References</a>
                 </li>
                 <li class="nav-item dropdown">
 

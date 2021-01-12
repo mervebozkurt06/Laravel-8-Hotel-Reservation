@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title','About Us-'.$setting->title)
+@section('title','References-'.$setting->title)
 @section('description'){{ $setting->description }}@endsection
 
 @section('keywords',$setting->keywords)
@@ -14,7 +14,7 @@
         <div class="container">
             <!-- Page Heading/Breadcrumbs -->
             <h1 class="mt-4 mb-3"> Home
-                <small>About Us</small>
+                <small>References</small>
             </h1>
         </div>
     </div>
@@ -26,12 +26,12 @@
                 <li class="breadcrumb-item">
                     <a href="{{route('home')}}">Home</a>
                 </li>
-                <li class="breadcrumb-item active">About Us</li>
+                <li class="breadcrumb-item active">References</li>
             </ol>
         </div>
 
         <div class="error-contents">
-            {!! $setting->aboutus !!}
+            {!! $setting->references !!}
 
         </div>
         <!-- /.jumbotron -->

@@ -169,7 +169,7 @@
                             <div class="tab-pane fade" id="contact-simple" role="tabpanel" aria-labelledby="contact-tab-simple">
                                 <div class="form-group">
                                     <label>Contact</label>
-                                    <input id="contact" type="text" name="contact" value="{{$data->contact}}"  class="form-control">
+                                    <input id="contact" type="text" name="contact" value="{{ $data->contact }}"  class="form-control">
                                     <script>
                                         $('#contact').summernote({
                                             placeholder: 'Hello stand alone ui',
@@ -210,6 +210,7 @@
                                     </script>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-sm-6 pl-0">
                                     <p class="text-right">
