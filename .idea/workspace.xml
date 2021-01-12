@@ -20,18 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8d493f6-582c-4326-b929-04ecff6c6b0a" name="Default Changelist" comment="Authentication,Logged Out">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/_blank.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/appyedek.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_12_114445_add_address_to_users.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_content.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +240,7 @@
       <workItem from="1610221013502" duration="4834000" />
       <workItem from="1610270942980" duration="16507000" />
       <workItem from="1610376521844" duration="4322000" />
-      <workItem from="1610435568110" duration="5957000" />
+      <workItem from="1610435568110" duration="9165000" />
     </task>
     <task id="LOCAL-00001" summary="Index updated">
       <created>1608987855631</created>
@@ -359,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610380858430</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="User Profile Page|Jetsream">
+      <created>1610441879480</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1610441879480</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +397,8 @@
     <MESSAGE value="Relation Category Hotel One to Many" />
     <MESSAGE value="Showing Category Tree and Sub Category on Homepage" />
     <MESSAGE value=" Home Page Setting Meta tags" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Home Page Setting Meta tags" />
+    <MESSAGE value="User Profile Page|Jetsream" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Profile Page|Jetsream" />
   </component>
   <component name="WindowStateProjectService">
     <state x="722" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609092468713">
@@ -410,6 +413,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="830" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1609697568741" />
+    <state x="894" y="340" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1610450533529">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="894" y="340" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.1536.824@0.0.1536.824" timestamp="1610450533529" />
     <state x="528" y="272" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1608386825597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -430,14 +437,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608987427262" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610380864123">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610441884871">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610380864123" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610441884871" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1609092438094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1536.824@0.0.1536.824" timestamp="1609092438094" />
+    <state x="694" y="69" key="com.intellij.database.dbimport.ImportDialog" timestamp="1610451855798">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="694" y="69" key="com.intellij.database.dbimport.ImportDialog/0.0.1536.824@0.0.1536.824" timestamp="1610451855798" />
     <state x="910" y="233" width="403" height="354" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1610222806871">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -31,7 +31,7 @@ Route::get('/references',[HomeController::class,'references'])->name('references
 
 //   /Admin(adding prefix like admin/category/add...)
 Route::middleware('auth')->prefix('admin')->group(function (){
-    Route::get('/',[HomeController::class,'index'])->name('admin_home');
+    Route::get('/',[\App\Http\Controllers\Admin\HomeController::class,'index'])->name('admin_home');
 
     Route::get('category',[CategoryController::class,'index'])->name('admin_category');
     Route::get('category/add',[CategoryController::class,'add'])->name('admin_category_add');
@@ -73,11 +73,15 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 
 });
 
+Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
+    Route::get('/profile',[UserController::class,'index'])->name('userprofile');
+
+});
 
 
 
 
-Route::get('/admin', [HomeController::class,'index'])->name('admin_home')->middleware('auth');
+
 Route::get('/admin/login', [HomeController::class,'login'])->name('admin_login');
 Route::post('/admin/logincheck', [HomeController::class,'logincheck'])->name('admin_logincheck');
 Route::get('/logout', [HomeController::class,'logout'])->name('logout');
