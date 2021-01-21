@@ -29,6 +29,7 @@ Route::get('/aboutus',[HomeController::class,'aboutus'])->name('aboutus');
 Route::get('/faq',[HomeController::class,'faq'])->name('faq');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 Route::post('/sendmessage',[HomeController::class,'sendmessage'])->name('sendmessage');
+Route::get('/hotel/{id}/{slug}',[HomeController::class,'hotel'])->name('hotel');
 Route::get('/references',[HomeController::class,'references'])->name('references');
 
 //   /Admin(adding prefix like admin/category/add...)
@@ -46,8 +47,8 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     Route::prefix('hotel')->group(function (){
         //Route assigned name "admin.user"...
         Route::get('/',[HotelController::class,'index'])->name('admin_hotels');
-        Route::get('create',[HotelController::class,'create'])->name('admin_hotel_add');
-        Route::post('store',[HotelController::class,'store'])->name('admin_hotel_store');
+        Route::get('create',[App\Http\Controllers\Admin\HotelController::class,'create'])->name('admin_hotel_add');
+        Route::post('store',[App\Http\Controllers\Admin\HotelController::class,'store'])->name('admin_hotel_store');
         Route::get('edit/{id}',[HotelController::class,'edit'])->name('admin_hotel_edit');
         Route::post('update/{id}',[HotelController::class,'update'])->name('admin_hotel_update');
         Route::get('delete/{id}',[HotelController::class,'destroy'])->name('admin_hotel_delete');
