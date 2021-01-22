@@ -30,6 +30,7 @@ Route::get('/faq',[HomeController::class,'faq'])->name('faq');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 Route::post('/sendmessage',[HomeController::class,'sendmessage'])->name('sendmessage');
 Route::get('/hotel/{id}/{slug}',[HomeController::class,'hotel'])->name('hotel');
+Route::get('/categoryhotels/{id}/{slug}',[HomeController::class,'categoryhotels'])->name('categoryhotels');
 Route::get('/references',[HomeController::class,'references'])->name('references');
 
 //   /Admin(adding prefix like admin/category/add...)

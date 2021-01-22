@@ -47,6 +47,15 @@ class HomeController extends Controller
         exit();
     }
 
+    public function categoryhotels($id,$slug)
+    {
+        $datalist = Hotel::where('category_id',$id)->get();
+        $data = Category::find($id);
+        #print_r($data);
+        #exit();
+        return view('home.category_hotels',['data'=>$data,'datalist'=>$datalist]);
+    }
+
     public function login()
     {
         return view("admin.login");
