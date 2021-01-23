@@ -16,6 +16,34 @@
 
     <!-- Page Content -->
     <div class="container">
+        <div class="about-main">
+            <div class="row">
+
+                <div class="col-md-12 blog-right-side">
+
+                    <!-- Categories Widget -->
+                    <div class="card my-4">
+                        <h5 class="card-header">What are you looking for?</h5>
+                        <div class="card-body">
+                            <div class="row">
+                                @foreach($picked as $rs)
+                                <div class="col-lg-1">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            <a href="#" class="mb-0">{{$rs->title}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div>
         <div class="services-bar">
             <h1 class="my-4">Our Best Services </h1>
             <!-- Services Section -->
@@ -42,24 +70,7 @@
             <!-- /.row -->
         </div>
         <!-- About Section -->
-        <div class="about-main">
-            <div class="row">
-                @foreach($picked as $rs)
-                    <div class="col-lg-6">
-                        <h2>{{$rs->title}}</h2>
-                        <p>{{$rs->country}}</p>
-                        <h5>{{$rs->address}}</h5>
-                        <p> {!!$rs->star !!} Star</p>
-                        <a href="{{route('hotel',['id'=>$rs->id,'slug'=>$rs->slug])}}" class="btn btn-primary">Learn More</a>
-                    </div>
 
-                    <div class="col-lg-6">
-                        <img class="img-fluid rounded"   src="{{\Illuminate\Support\Facades\Storage::url($rs->image)}}"  alt="" />
-                    </div>
-                @endforeach
-            </div>
-            <!-- /.row -->
-        </div>
         <!-- Portfolio Section -->
         <div class="portfolio-main">
             <h2>The Most Popular Hotels</h2>
