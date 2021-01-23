@@ -28,12 +28,18 @@ class HomeController extends Controller
     {
         $setting = Setting::first();
         $slider = Hotel::select('id','title','image','country','slug')->limit(3)->get();
+        $daily = Hotel::select('id','title','image','slug')->limit(3)->get();
+        $last = Hotel::select('id','title','address','image','country','slug')->limit(6)->get();
+        $picked = Hotel::select('id','title','address','image','email','star','country','slug')->limit(1)->get();
 
         #print_r($slider);
         #exit();
         $data= [
             'setting'=>$setting,
             'slider'=>$slider,
+            'daily'=>$daily,
+            'last'=>$last,
+            'picked'=>$picked,
             'page'=>'home'
         ];
 
