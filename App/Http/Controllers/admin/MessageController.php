@@ -59,7 +59,7 @@ class MessageController extends Controller
      */
     public function edit(Message $message,$id)
     {
-        $data = Message::find($id);
+        $data = Message::where('id', $id)->first();
         $data->status = 'Read';
         $data->save();
         return view('admin.messages_edit',['data'=>$data]);

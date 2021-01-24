@@ -31,7 +31,7 @@ class HomeController extends Controller
         $slider = Hotel::select('id','title','image','country','slug')->limit(3)->get();
         $daily = Hotel::select('id','title','image','slug')->limit(3)->get();
         $last = Hotel::select('id','title','address','image','country','slug')->limit(6)->get();
-        $picked = Category::select('id','title')->limit(8)->get();
+        $picked = Category::select('id','title')->limit(5)->get();
 
         #print_r($slider);
         #exit();
@@ -54,6 +54,27 @@ class HomeController extends Controller
         #print_r($data);
         #exit();
         return view('home.hotel_detail',['data'=>$data,'datalist'=>$datalist]);
+    }
+
+    public function gethotel(Request $request)
+    {
+        $search = $request->input('search');
+        $count = Hotel::where('title','like','%'.$search.'%')->get()->count();
+        if($count==1)
+        {
+            $data = Hotel::where('title','like','%'.$search.'%')->first();
+            return redirect()->route('hotel',['id'=>$data->id,'slug'=>$data->slug]);
+        }
+        else
+        {
+            return redirect()->route('hotellist',['search'=>$search]);
+        }
+    }
+
+    public function hotellist($search)
+    {
+        $datalist = Hotel::where('title','like','%'.$search.'%')->get();
+        return view('home.search_hotels',['search'=>$search,'datalist'=>$datalist]);
     }
 
     public function categoryhotels($id,$slug)

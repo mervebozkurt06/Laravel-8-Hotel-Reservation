@@ -32,6 +32,8 @@ Route::post('/sendmessage',[HomeController::class,'sendmessage'])->name('sendmes
 Route::get('/hotel/{id}/{slug}',[HomeController::class,'hotel'])->name('hotel');
 Route::get('/categoryhotels/{id}/{slug}',[HomeController::class,'categoryhotels'])->name('categoryhotels');
 Route::get('/references',[HomeController::class,'references'])->name('references');
+Route::post('/gethotel',[HomeController::class,'gethotel'])->name('gethotel');
+Route::get('/hotellist/{search}',[HomeController::class,'hotellist'])->name('hotellist');
 
 //   /Admin(adding prefix like admin/category/add...)
 Route::middleware('auth')->prefix('admin')->group(function (){
