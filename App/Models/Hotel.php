@@ -16,4 +16,8 @@ class Hotel extends Model
         return $this->belongsTo(Category::class); #artık istediğimiz alanı çekebiliriz
     }
 
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

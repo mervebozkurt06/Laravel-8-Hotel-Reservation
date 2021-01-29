@@ -33,6 +33,11 @@
                         </a>
                     </li>
                     <li class="nav-item ">
+                        <a class="nav-link active" href="{{route('admin_review')}}"  aria-expanded="false"  >
+                            <i class="fa fa-fw fa-user-circle"></i>Reviews
+                        </a>
+                    </li>
+                    <li class="nav-item ">
                         <a class="nav-link active" href="{{route('admin_setting')}}"  aria-expanded="false"  >
                             <i class="fa fa-fw fa-user-circle"></i>Settings
                         </a>

@@ -54,7 +54,7 @@
 
                 <!-- Date/Time -->
                 <blockquote class="blockquote">
-                <p class="mb-0">DETAILS</p>
+                    <p class="mb-0">DETAILS</p>
                 </blockquote>
                 <hr>
                 <p class="lead">{!! $data->detail !!}</p>
@@ -65,50 +65,37 @@
                     <div class="card my-4">
                         <h5 class="card-header">Leave a Comment:</h5>
                         <div class="card-body">
-                            <form>
-                                <div class="form-group">
-                                    <textarea class="form-control" rows="3"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+
+                            @livewire('review',['id'=>$data->id])
+
                         </div>
                     </div>
                 </div>
 
-                <!-- Single Comment -->
-                <div class="media mb-4">
-                    <img class="d-flex mr-3 rounded-circle" src="images/testi_01.png" alt="">
-                    <div class="media-body">
-                        <h5 class="mt-0">Commenter Name</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
-                </div>
+                @php
+                    $avgrev = \App\Http\Controllers\HomeController::avrgreview($data->id);
+                    $countreview = \App\Http\Controllers\HomeController::countreview($data->id);
+                @endphp
 
-                <!-- Comment with nested comments -->
-                <div class="media mb-4">
-                    <img class="d-flex mr-3 rounded-circle" src="images/testi_02.png" alt="">
-                    <div class="media-body">
-                        <h5 class="mt-0">Commenter Name</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                <h5 class="mt-0"><strong>{{$countreview}} Review(s)</strong></h5>
 
-                        <div class="media mt-4">
-                            <img class="d-flex mr-3 rounded-circle" src="images/testi_01.png" alt="">
-                            <div class="media-body">
-                                <h5 class="mt-0">Commenter Name</h5>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </div>
+                @foreach($reviews as $rs)
+                    <hr>
+
+                    <div class="media mb-4">
+                        <img class="d-flex mr-3 rounded-circle" src="{{$rs->user->image}}" alt="">
+                        <div class="media-body">
+
+                            <h5 class="mt-0">{{$rs->user->name}}</h5>
+                            <p>{{$rs->subject}}</p>
+                            <p>{{$rs->review}}</p>
+                            <p><i class="fas fa-star">{{$rs->rate}}</i> | {{$rs->created_at}}</p>
+
                         </div>
-
-                        <div class="media mt-4">
-                            <img class="d-flex mr-3 rounded-circle" src="images/testi_03.png" alt="">
-                            <div class="media-body">
-                                <h5 class="mt-0">Commenter Name</h5>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </div>
-                        </div>
-
                     </div>
-                </div>
+                @endforeach
+
+
 
             </div>
 

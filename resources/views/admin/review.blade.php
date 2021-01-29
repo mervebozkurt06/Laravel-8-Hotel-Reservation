@@ -12,12 +12,12 @@
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="page-header">
-                        <h2 class="pageheader-title">Hotel List </h2>
+                        <h2 class="pageheader-title">Reviews</h2>
                         <div class="page-breadcrumb">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Hotel</a></li>
+                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Review</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -31,11 +31,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
                     <div class="card">
-                        <div class="card-header">
-                            <a href="{{route('admin_hotel_add')}}" class="btn btn-primary">Add Hotel</a>
 
-
-                        </div>
                         <div class="card-body">
                             <div class="table">
                                 <div id="example3_wrapper" class="dataTables_wrapper dt-bootstrap4">
@@ -45,43 +41,40 @@
                                             <table id="example3" class="table table-striped table-bordered dataTable" style="width: 100%;" role="grid" aria-describedby="example3_info">
                                                 <thead>
                                                 <tr role="row">
-                                                    <th class="sorting_asc" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 70px;">Id</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Image</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Image Gallery</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 111px;">Category</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 49px;">Title</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Star</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Email</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 50px;">Status</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 52px;">Actions</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 52px;">Delete</th>
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"  style="width: 70px;">Id</th>
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"  style="width: 70px;">Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" style="width: 27px;">Hotel</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"  style="width: 27px;">Subject</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"  style="width: 111px;">Review</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" style="width: 49px;">Status</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" style="width: 49px;">Rate</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"  style="width: 27px;">Date</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1"  style="width: 27px;">Edit</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" style="width: 52px;">Delete</th>
                                                 </tr>
                                                 </thead>
 
+                                                @include('home.message')
                                                 <tbody>
                                                 @foreach($datalist as $rs)
                                                     <tr role="row" class="odd">
                                                         <td >{{$rs->id}}</td>
+                                                        <td >{{$rs->user->name}}</td>
                                                         <td>
-                                                            @if($rs->image)
-                                                                <img src="{{ Storage::url($rs->image) }}" height="30" alt="">
-                                                            @endif
+                                                            <a href="{{route('hotel',['id'=>$rs->hotel->id,'slug'=>$rs->hotel->slug])}}"> {{$rs->hotel->title}}</a>
                                                         </td>
-                                                        <td ><a href="{{route('admin_image_add',['hotel_id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100, height=700')">
-                                                                <img src="{{asset('assets/admin/images')}}/gallery.png" height="30"></a> </td>
-                                                        <td >
-                                                            {{ \App\Http\Controllers\admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}
-                                                        </td>
-                                                        <td>{{$rs->title}}</td>
-                                                        <td>{{$rs->star}}</td>
-                                                        <td>{{$rs->email}}</td>
+                                                        <td>{{$rs->subject}}</td>
+                                                        <td>{{$rs->review}}</td>
                                                         <td>{{$rs->status}}</td>
+                                                        <td>{{$rs->rate}}</td>
+
+                                                        <td>{{$rs->created_at}}</td>
                                                         <td>
-                                                            <a href="{{route('admin_hotel_edit',['id'=>$rs->id])}}">
+                                                            <a href="{{route('admin_review_show',['id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100, height=700')">
                                                                 <img src="{{asset('assets/admin/images')}}/edit.png" height="30"></a>
                                                         </td>
                                                         <td>
-                                                            <a href="{{route('admin_hotel_delete',['id'=>$rs->id])}}" onclick="return confirm('Are you sure?')">
+                                                            <a href="{{route('admin_review_delete',['id'=>$rs->id])}}" onclick="return confirm('Are you sure?')">
                                                                 <img src="{{asset('assets/admin/images')}}/delete.png" height="30"></a>
                                                         </td>
                                                     </tr>

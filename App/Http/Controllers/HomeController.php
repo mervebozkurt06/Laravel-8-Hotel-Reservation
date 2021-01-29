@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+
 use App\Models\Category;
 use App\Models\Hotel;
 use App\Models\Image;
+use App\Models\Review;
 use App\Models\Message;
 use App\Models\Setting;
 use Illuminate\Http\Request;
@@ -24,6 +26,18 @@ class HomeController extends Controller
     {
         return $setting = Setting::first();
     }
+
+    public static function countreview($id)
+    {
+        return Review::where('hotel_id',$id)->count();
+    }
+
+    public static function avrgreview($id)
+    {
+        return Review::where('hotel_id',$id)->average('rate');
+    }
+
+
 
     public function index()
     {
@@ -51,9 +65,10 @@ class HomeController extends Controller
     {
         $data = Hotel::find($id);
         $datalist = Image::where('hotel_id',$id)->get();
+        $reviews = Review::where('hotel_id',$id)->get();
         #print_r($data);
         #exit();
-        return view('home.hotel_detail',['data'=>$data,'datalist'=>$datalist]);
+        return view('home.hotel_detail',['data'=>$data,'datalist'=>$datalist,'reviews'=>$reviews]);
     }
 
     public function gethotel(Request $request)

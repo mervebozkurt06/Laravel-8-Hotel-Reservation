@@ -12,7 +12,7 @@
                         <a href="#">My Hotels</a>
                     </li>
                     <li>
-                        <a href="#">My Comments</a>
+                        <a href="{{route('myreviews')}}">My Reviews</a>
                     </li>
 
                     <li>

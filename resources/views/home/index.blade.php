@@ -48,7 +48,9 @@
                                 @livewire('search')
                                 <span class="input-group-btn"><button class="btn btn-secondary" type="submit">Go!</button></span>
                                 </form>
+                                @section('footerjs')
                                 @livewireScripts
+                                @endsection
                             </div>
                         </div>
                     </div>
@@ -72,8 +74,15 @@
                             <div class="card-body">
                                 <p class="card-text">{{$rs->address}}</p>
                             </div>
+                            @php
+                                $avgrev = \App\Http\Controllers\HomeController::avrgreview($rs->id);
+                                $countreview = \App\Http\Controllers\HomeController::countreview($rs->id);
+                            @endphp
                             <div class="card-footer">
                                 <a href="{{route('hotel',['id'=>$rs->id,'slug'=>$rs->slug])}}" class="btn btn-primary">Learn More</a>
+                                <hr>
+                                <strong>{{$countreview}} Review(s)</strong>
+                                <p><i class="fas fa-star">{{$avgrev}}</i></p>
                             </div>
                         </div>
                     </div>
@@ -98,9 +107,16 @@
                                     <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
                                 </a>
                             </div>
+                            @php
+                                $avgrev = \App\Http\Controllers\HomeController::avrgreview($rs->id);
+                                $countreview = \App\Http\Controllers\HomeController::countreview($rs->id);
+                            @endphp
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <a href="{{asset('assets')}}/#">{{$rs->title}}</a>
+
+                                    <h5>{{$countreview}} Review(s)</h5>
+                                    <h5><i class="fas fa-star">{{$avgrev}}</i></h5>
                                 </h4>
                             </div>
                         </div>
