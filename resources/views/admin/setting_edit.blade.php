@@ -4,9 +4,7 @@
 
 @section('javascript')
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
 @endsection
 
 
@@ -145,68 +143,30 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="about-simple" role="tabpanel" aria-labelledby="about-tab-simple">
+
                                 <div class="form-group">
                                     <label>About Us</label>
-                                    <input id="aboutus"  name="aboutus" value="{{$data->aboutus}}"  class="form-control">
+                                    <textarea id="aboutus" name="aboutus" >{{$data->aboutus}}</textarea>
                                     <script>
-                                        $('#aboutus').summernote({
-                                            placeholder: 'Hello stand alone ui',
-                                            tabsize: 2,
-                                            height: 120,
-                                            toolbar: [
-                                                ['style', ['style']],
-                                                ['font', ['bold', 'underline', 'clear']],
-                                                ['color', ['color']],
-                                                ['para', ['ul', 'ol', 'paragraph']],
-                                                ['table', ['table']],
-                                                ['insert', ['link', 'picture', 'video']],
-                                                ['view', ['fullscreen', 'codeview', 'help']]
-                                            ]
-                                        });
+                                        CKEDITOR.replace( 'aboutus' );
                                     </script>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="contact-simple" role="tabpanel" aria-labelledby="contact-tab-simple">
                                 <div class="form-group">
                                     <label>Contact</label>
-                                    <input id="contact" type="text" name="contact" value="{{ $data->contact }}"  class="form-control">
+                                    <textarea id="contact" name="contact" >{{$data->contact}}</textarea>
                                     <script>
-                                        $('#contact').summernote({
-                                            placeholder: 'Hello stand alone ui',
-                                            tabsize: 2,
-                                            height: 120,
-                                            toolbar: [
-                                                ['style', ['style']],
-                                                ['font', ['bold', 'underline', 'clear']],
-                                                ['color', ['color']],
-                                                ['para', ['ul', 'ol', 'paragraph']],
-                                                ['table', ['table']],
-                                                ['insert', ['link', 'picture', 'video']],
-                                                ['view', ['fullscreen', 'codeview', 'help']]
-                                            ]
-                                        });
+                                        CKEDITOR.replace( 'contact' );
                                     </script>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="reference-simple" role="tabpanel" aria-labelledby="reference-tab-simple">
                                 <div class="form-group">
                                     <label>References</label>
-                                    <input id="references" type="text" name="references" value="{{$data->references}}"  class="form-control">
+                                    <textarea id="references" name="references" >{{$data->references}}</textarea>
                                     <script>
-                                        $('#references').summernote({
-                                            placeholder: 'Hello stand alone ui',
-                                            tabsize: 2,
-                                            height: 120,
-                                            toolbar: [
-                                                ['style', ['style']],
-                                                ['font', ['bold', 'underline', 'clear']],
-                                                ['color', ['color']],
-                                                ['para', ['ul', 'ol', 'paragraph']],
-                                                ['table', ['table']],
-                                                ['insert', ['link', 'picture', 'video']],
-                                                ['view', ['fullscreen', 'codeview', 'help']]
-                                            ]
-                                        });
+                                        CKEDITOR.replace( 'references' );
                                     </script>
                                 </div>
                             </div>

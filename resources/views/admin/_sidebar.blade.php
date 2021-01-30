@@ -38,6 +38,11 @@
                         </a>
                     </li>
                     <li class="nav-item ">
+                        <a class="nav-link active" href="{{route('admin_faq')}}"  aria-expanded="false"  >
+                            <i class="fa fa-fw fa-user-circle"></i>FAQ
+                        </a>
+                    </li>
+                    <li class="nav-item ">
                         <a class="nav-link active" href="{{route('admin_setting')}}"  aria-expanded="false"  >
                             <i class="fa fa-fw fa-user-circle"></i>Settings
                         </a>
