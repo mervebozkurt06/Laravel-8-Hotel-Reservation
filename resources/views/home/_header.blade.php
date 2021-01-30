@@ -46,7 +46,7 @@
                         FAQ
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                        <a class="dropdown-item" href="faq.html">FAQ</a>
+                        <a class="dropdown-item" href="{{route('faq')}}">FAQ</a>
                         <a class="dropdown-item" href="404.html">404</a>
                         <a class="dropdown-item" href="pricing.html">Pricing Table</a>
                     </div>

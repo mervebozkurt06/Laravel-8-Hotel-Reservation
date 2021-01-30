@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Hotel;
 use App\Models\Image;
 use App\Models\Review;
@@ -148,7 +149,8 @@ class HomeController extends Controller
     }
     public function faq()
     {
-        return view("home.about");
+        $datalist = Faq::all()->sortBy('position');
+        return view("home.faq",['datalist'=>$datalist]);
     }
     public function contact()
     {
