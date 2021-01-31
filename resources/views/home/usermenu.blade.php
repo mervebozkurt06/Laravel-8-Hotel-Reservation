@@ -9,7 +9,7 @@
                         <a href="{{route('myprofile')}}">My Profile</a>
                     </li>
                     <li>
-                        <a href="#">My Hotels</a>
+                        <a href="{{route('user_hotels')}}">My Hotels</a>
                     </li>
                     <li>
                         <a href="{{route('myreviews')}}">My Reviews</a>

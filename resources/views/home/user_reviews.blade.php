@@ -65,22 +65,13 @@
                     @endforeach
                     </tbody>
 
-                    <tfoot>
-
-                    </tfoot>
                 </table>
-
-
-
-
 
 
             </div>
             <div class="col-md-3 blog-right-side">
                 @include('home.usermenu')
             </div>
-
-
 
         </div>
         <!-- /.jumbotron -->
