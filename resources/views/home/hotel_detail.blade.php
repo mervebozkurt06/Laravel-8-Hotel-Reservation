@@ -79,13 +79,12 @@
             <div class="" id="accordion" role="tablist" aria-multiselectable="true">
 
                 <div class="card accordion-single">
-                    <div class="card-header" role="tab" id="headingOne">
+                    <div class="card-header" role="tab" id="headingTwo">
                         <h5 class="mb-0">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#3" aria-expanded="true" aria-controls="collapseOne">DETAILS</a>
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#4" aria-expanded="false" aria-controls="collapseTwo">DETAILS</a>
                         </h5>
                     </div>
-
-                    <div id="3" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                    <div id="4" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="card-body">
                             {!! $data->detail !!}
                         </div>

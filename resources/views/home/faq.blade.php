@@ -27,14 +27,14 @@
             <div class="" id="accordion" role="tablist" aria-multiselectable="true">
                 @foreach($datalist as $rs)
                     <div class="card accordion-single">
-                        <div class="card-header" role="tab" id="headingOne">
+                        <div class="card-header" role="tab" id="headingThree">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#{{$rs->position}}" aria-expanded="true" aria-controls="collapseOne">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#{{$rs->position}}" aria-expanded="false" aria-controls="collapseThree">
                                     {{$rs->question}}
                                 </a>
                             </h5>
                         </div>
-                        <div id="{{$rs->position}}" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="{{$rs->position}}" class="collapse" role="tabpanel" aria-labelledby="headingThree">
                             <div class="card-body">
                                 {!! $rs->answer !!}
                             </div>
