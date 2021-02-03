@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HotelController;
 use App\Http\Controllers\Admin\ImageController;
 use App\Http\Controllers\Admin\ReviewController;
+use App\Http\Controllers\Admin\RoomController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\HomeController;
@@ -76,6 +77,16 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::post('store/{hotel_id}',[ImageController::class,'store'])->name('admin_image_store'); //hotel id
         Route::get('delete/{id}/{hotel_id}',[ImageController::class,'destroy'])->name('admin_image_delete'); //image id
         Route::get('show',[ImageController::class,'show'])->name('admin_image_show');
+
+    });
+
+    //Room Gallery
+    Route::prefix('room')->group(function (){
+        //Route assigned name "admin.user".
+        Route::get('create/{hotel_id}',[RoomController::class,'create'])->name('admin_room_add'); //hotel id
+        Route::post('store/{hotel_id}',[RoomController::class,'store'])->name('admin_room_store'); //hotel id
+        Route::get('delete/{id}/{hotel_id}',[RoomController::class,'destroy'])->name('admin_room_delete'); //image id
+        Route::get('show',[RoomController::class,'show'])->name('admin_room_show');
 
     });
 

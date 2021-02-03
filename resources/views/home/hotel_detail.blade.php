@@ -52,14 +52,39 @@
                     <!-- /.row -->
                 </div>
 
-                <!-- Date/Time -->
-                <blockquote class="blockquote">
-                    <p class="mb-0">DETAILS</p>
-                </blockquote>
-                <hr>
-                <p class="lead">{!! $data->detail !!}</p>
 
 
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4 blog-right-side">
+                <!-- Side Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">{{$data->title}}</h5>
+                    <div class="card-body">
+                        <p>{{$data->address}}</p>
+                        <ul>
+                            <li>{{$data->country}}</li>
+                            <li>{{$data->star}} Star</li>
+                            <li>{{$data->description}}</li>
+                            <li>Adipiscing Elit</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card my-4">
+                    <h5 class="card-header">DETAILS</h5>
+                    <div class="card-body">
+                        {!! $data->detail !!}
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <!-- Post Content Column -->
+            <div class="col-lg-8">
                 <div class="blog-right-side">
                     <!-- Comments Form -->
                     <div class="card my-4">
@@ -94,27 +119,6 @@
                         </div>
                     </div>
                 @endforeach
-
-
-
-            </div>
-
-            <!-- Sidebar Widgets Column -->
-            <div class="col-md-4 blog-right-side">
-                <!-- Side Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">{{$data->title}}</h5>
-                    <div class="card-body">
-                        <p>{{$data->address}}</p>
-                        <ul>
-                            <li>{{$data->country}}</li>
-                            <li>{{$data->star}} Star</li>
-                            <li>{{$data->description}}</li>
-                            <li>Adipiscing Elit</li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
 
         </div>
