@@ -10,6 +10,7 @@ use App\Models\Hotel;
 use App\Models\Image;
 use App\Models\Review;
 use App\Models\Message;
+use App\Models\Room;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -67,9 +68,10 @@ class HomeController extends Controller
         $data = Hotel::find($id);
         $datalist = Image::where('hotel_id',$id)->get();
         $reviews = Review::where('hotel_id',$id)->get();
+        $rooms = Room::where('hotel_id',$id)->get();
         #print_r($data);
         #exit();
-        return view('home.hotel_detail',['data'=>$data,'datalist'=>$datalist,'reviews'=>$reviews]);
+        return view('home.hotel_detail',['data'=>$data,'datalist'=>$datalist,'reviews'=>$reviews,'rooms'=>$rooms ]);
     }
 
     public function gethotel(Request $request)
