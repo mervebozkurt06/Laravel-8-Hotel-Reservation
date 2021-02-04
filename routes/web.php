@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\RoomController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -119,6 +120,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     });
 });
 
+
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
     Route::get('/',[UserController::class,'index'])->name('myprofile');
     Route::get('/myreviews',[UserController::class,'myreviews'])->name('myreviews');
@@ -139,8 +141,17 @@ Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
         Route::post('update/{id}',[App\Http\Controllers\HotelController::class,'update'])->name('user_hotel_update');
         Route::get('delete/{id}',[App\Http\Controllers\HotelController::class,'destroy'])->name('user_hotel_delete');
         Route::get('show',[App\Http\Controllers\HotelController::class,'show'])->name('user_hotel_show');
-
     });
+
+    #Reservations
+    Route::prefix('reservation')->group(function (){
+        //Route assigned name "admin.user"...
+        Route::get('/',[ReservationController::class,'index'])->name('user_reservation');
+        Route::post('store/{id}',[ReservationController::class,'store'])->name('user_reservation_add');
+        Route::post('update/{id}',[ReservationController::class,'update'])->name('user_reservation_update');
+        Route::get('delete/{id}',[ReservationController::class,'destroy'])->name('user_reservation_delete');
+    });
+
 
     //Hotel Image Gallery
     Route::prefix('image')->group(function (){

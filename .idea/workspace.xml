@@ -20,9 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8d493f6-582c-4326-b929-04ecff6c6b0a" name="Default Changelist" comment="Authentication,Logged Out">
+      <change afterPath="$PROJECT_DIR$/App/Http/Controllers/ReservationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Models/Reservation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_04_104032_create_reservations_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_04_111012_reservation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/user_reservation.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/user_reservation_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Models/Hotel.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Models/Hotel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Models/Room.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Models/Room.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/faq.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,15 +189,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\admin" />
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\layouts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
       <recent name="C:\Php\LaravelHotelReservationProject\app\Http\Controllers" />
       <recent name="C:\Php\LaravelHotelReservationProject\app\Http\Controllers\front" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\admin" />
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\layouts" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug._blank.blade.php">
@@ -246,7 +257,8 @@
       <workItem from="1612115057409" duration="3350000" />
       <workItem from="1612349755484" duration="6924000" />
       <workItem from="1612385514529" duration="3338000" />
-      <workItem from="1612389034387" duration="585000" />
+      <workItem from="1612389034387" duration="761000" />
+      <workItem from="1612434436015" duration="16697000" />
     </task>
     <task id="LOCAL-00001" summary="Index updated">
       <created>1608987855631</created>
@@ -451,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612388828915</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Faq Page updated">
+      <created>1612389640981</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1612389640981</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +490,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Database Transactions" />
     <MESSAGE value="Categor List(Admin Panel)" />
     <MESSAGE value="Category updated" />
     <MESSAGE value="Edit Category" />
@@ -496,7 +514,8 @@
     <MESSAGE value="User Hotels (CRUD)" />
     <MESSAGE value="Adding Room for each Hotel Admin Panel" />
     <MESSAGE value="hotel_detail updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="hotel_detail updated" />
+    <MESSAGE value="Faq Page updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Faq Page updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="722" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609092468713">
@@ -551,6 +570,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="694" y="69" key="com.intellij.database.dbimport.ImportDialog/0.0.1536.824@0.0.1536.824" timestamp="1610451855798" />
+    <state x="825" y="211" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1612459949089">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="825" y="211" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1536.824@0.0.1536.824" timestamp="1612459949089" />
     <state x="910" y="233" width="403" height="354" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1610222806871">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

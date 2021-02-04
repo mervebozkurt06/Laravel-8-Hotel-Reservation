@@ -7,7 +7,7 @@
         <div class="container">
             <!-- Page Heading/Breadcrumbs -->
             <h1 class="mt-4 mb-3">FAQ
-                <small>Subheading</small>
+                <small>Frequently Asked Questions</small>
             </h1>
         </div>
     </div>

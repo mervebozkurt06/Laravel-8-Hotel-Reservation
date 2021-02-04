@@ -113,7 +113,11 @@
                                                 <div class="col-lg-6">
                                                     <h2 class="card-title">{{$rs->title}}</h2>
                                                     <p class="card-text">{{$rs->description}}</p>
-                                                    <a href="#" class="btn btn-primary">Reserve Room &rarr;</a>
+                                                    <form action="{{route('user_reservation_add',['id'=>$rs->id])}}" method="post">
+                                                        @csrf
+                                                        <input class="input" name="days" type="number" value="1" max="{{$rs->number}}">
+                                                        <button  class="btn btn-primary">Reserve Room &rarr;</button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -149,7 +153,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    </div>
+                                </div>
                                 <div class="col-lg-7">
                                     @php
                                         $avgrev = \App\Http\Controllers\HomeController::avrgreview($data->id);
