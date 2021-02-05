@@ -92,7 +92,8 @@
                                         <input type="number" class="qs-overlay-year" placeholder="4-digit year">
                                         <div class="qs-submit qs-disabled">Submit</div>
                                     </div>
-                                </div></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-row tm-search-form-row">
                             <div class="form-group tm-form-element tm-form-element-2">

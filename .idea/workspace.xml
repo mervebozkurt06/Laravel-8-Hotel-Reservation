@@ -20,19 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8d493f6-582c-4326-b929-04ecff6c6b0a" name="Default Changelist" comment="Authentication,Logged Out">
-      <change afterPath="$PROJECT_DIR$/App/Http/Controllers/ReservationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Models/Reservation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_04_104032_create_reservations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_04_111012_reservation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/user_reservation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/user_reservation_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Models/Hotel.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Models/Hotel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Http/Controllers/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/Controllers/ReservationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Models/Room.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Models/Room.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/faq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/hotel_detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_reservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_reservation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_reservation_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_reservation_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -259,6 +253,8 @@
       <workItem from="1612385514529" duration="3338000" />
       <workItem from="1612389034387" duration="761000" />
       <workItem from="1612434436015" duration="16697000" />
+      <workItem from="1612470314780" duration="970000" />
+      <workItem from="1612519020296" duration="20375000" />
     </task>
     <task id="LOCAL-00001" summary="Index updated">
       <created>1608987855631</created>
@@ -470,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612389640981</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Reservations">
+      <created>1612470351256</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1612470351256</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +493,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Categor List(Admin Panel)" />
     <MESSAGE value="Category updated" />
     <MESSAGE value="Edit Category" />
     <MESSAGE value="Hotels CRUD" />
@@ -515,7 +517,8 @@
     <MESSAGE value="Adding Room for each Hotel Admin Panel" />
     <MESSAGE value="hotel_detail updated" />
     <MESSAGE value="Faq Page updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Faq Page updated" />
+    <MESSAGE value="Reservations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reservations" />
   </component>
   <component name="WindowStateProjectService">
     <state x="722" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609092468713">
@@ -526,10 +529,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608386816433" />
-    <state x="830" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612355779233">
+    <state x="830" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612528597206">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="830" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612355779233" />
+    <state x="830" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612528597206" />
     <state x="894" y="340" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1610450533529">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -558,10 +561,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608987427262" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612388844291">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612470355375">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612388844291" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612470355375" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1609092438094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Hotel;
 use App\Models\Reservation;
+use App\Models\Room;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,9 +27,11 @@ class ReservationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request,Hotel $hotel_id,Room $room_id)
     {
-        //
+
+        $days = $request->input('days');
+        return view('home.user_reservation_add',['hotel_id'=>$hotel_id,'room_id'=>$room_id,'days'=>$days]); //view-> user_reservation
     }
 
     /**
@@ -36,24 +40,30 @@ class ReservationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,$id)
+    public function store(Request $request,$hotel_id,$room_id)
     {
-        $data = Reservation::where('room_id',$id)->where('user_id',Auth::id())->first();
-        if($data)
-        {
-            $data->days=$data->days+$request->input('days');
-        }
-        else
-        {
-            $data = new Reservation;
-            $data->hotel_id = $id;
-            $data->room_id = $id;
-            $data->user_id = Auth::id();
-            $data->days=$request->input('days');
-        }
+        //$data->total = $room_id->price*($data->adult+$data->kid);
 
+        $data = new Reservation;
+        $data->user_id = Auth::id();
+        $data->room_id = $room_id;
+        $data->hotel_id = $hotel_id;
+        $data->name = $request->input('name');
+        $data->surname = $request->input('surname');
+        $data->email = $request->input('email');
+        $data->phone = $request->input('phone');
+        $data->message = $request->input('message');
+        $data->days = $request->input('days');
+        $data->total = $request->input('total');
+        $data->adult = $request->input('adult');
+        $data->kid = $request->input('kid');
+        $data->checkin = $request->input('checkin');
+        $data->checkout = $request->input('checkout');
+        $data->status = $request->input('status');
+        $data->IP = $_SERVER['REMOTE_ADDR'];
         $data->save();
-        return redirect()->back()->with('success','Booking Request Successfully');
+
+        return redirect()->route('user_reservation')->with('success','Reservation saved successfully');
 
     }
 

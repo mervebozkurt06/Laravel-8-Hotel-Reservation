@@ -113,11 +113,14 @@
                                                 <div class="col-lg-6">
                                                     <h2 class="card-title">{{$rs->title}}</h2>
                                                     <p class="card-text">{{$rs->description}}</p>
-                                                    <form action="{{route('user_reservation_add',['id'=>$rs->id])}}" method="post">
-                                                        @csrf
-                                                        <input class="input" name="days" type="number" value="1" max="{{$rs->number}}">
-                                                        <button  class="btn btn-primary">Reserve Room &rarr;</button>
+                                                    <form action="{{route('user_reservation_create',['hotel_id'=>$rs->hotel_id,'room_id'=>$rs->id])}}" method="post">
+
+                                                         @csrf
+                                                        Days  <input class="input" id="days" name="days" type="number" value="1" max="{{$rs->number}}">
+
+                                                        <input type="submit" value="Reserve Room">
                                                     </form>
+
                                                 </div>
                                             </div>
                                         </div>

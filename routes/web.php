@@ -147,7 +147,8 @@ Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
     Route::prefix('reservation')->group(function (){
         //Route assigned name "admin.user"...
         Route::get('/',[ReservationController::class,'index'])->name('user_reservation');
-        Route::post('store/{id}',[ReservationController::class,'store'])->name('user_reservation_add');
+        Route::post('create/{hotel_id}/{room_id}',[ReservationController::class,'create'])->name('user_reservation_create');
+        Route::post('store/{hotel_id}/{room_id}',[ReservationController::class,'store'])->name('user_reservation_store');
         Route::post('update/{id}',[ReservationController::class,'update'])->name('user_reservation_update');
         Route::get('delete/{id}',[ReservationController::class,'destroy'])->name('user_reservation_delete');
     });
