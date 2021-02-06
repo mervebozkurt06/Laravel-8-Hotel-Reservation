@@ -115,10 +115,26 @@
                                                     <p class="card-text">{{$rs->description}}</p>
                                                     <form action="{{route('user_reservation_create',['hotel_id'=>$rs->hotel_id,'room_id'=>$rs->id])}}" method="post">
 
-                                                         @csrf
-                                                        Days  <input class="input" id="days" name="days" type="number" value="1" max="{{$rs->number}}">
+                                                        @csrf
+                                                        <table>
+                                                            <tr role="row">
+                                                                <td>
 
-                                                        <input type="submit" value="Reserve Room">
+                                                                    Days :<input class="input" id="days" name="days" type="number" value="1" max="{{$rs->number}}">
+                                                                    Adult:<input class="input" id="adult" name="adult" type="number" value="1" >
+                                                                    Kid  :<input class="input" id="kid" name="kid" type="number" value="1" >
+                                                                </td>
+                                                                <td>
+                                                                    <label>Check In</label>
+                                                                    <input class="float-left" type="date" id="checkin" name="checkin" style="height: 50px" required>
+                                                                </td>
+                                                                <td>
+                                                                    <label>Check Out</label>
+                                                                    <input class="float-left" type="date" id="checkout" name="checkout" style="height: 50px" required>
+                                                                </td>
+                                                                <input type="submit" value="Reserve Room">
+                                                            </tr>
+                                                        </table>
                                                     </form>
 
                                                 </div>

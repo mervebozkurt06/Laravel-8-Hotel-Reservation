@@ -29,9 +29,23 @@ class ReservationController extends Controller
      */
     public function create(Request $request,Hotel $hotel_id,Room $room_id)
     {
-
+        $room = Room::find($room_id)->first();
+        $adult = $request->input('adult');
+        $kid = $request->input('kid');
+        $total = $room->price*($adult+$kid);
         $days = $request->input('days');
-        return view('home.user_reservation_add',['hotel_id'=>$hotel_id,'room_id'=>$room_id,'days'=>$days]); //view-> user_reservation
+        $checkin = $request->input('checkin');
+        $checkout = $request->input('checkout');
+        return view('home.user_reservation_add',[
+            'hotel_id'=>$hotel_id,
+            'room_id'=>$room_id,
+            'days'=>$days,
+            'checkin'=>$checkin,
+            'checkout'=>$checkout,
+            'adult'=>$adult,
+            'kid'=>$kid,
+            'total'=>$total
+        ]); //view-> user_reservation
     }
 
     /**
@@ -42,8 +56,6 @@ class ReservationController extends Controller
      */
     public function store(Request $request,$hotel_id,$room_id)
     {
-        //$data->total = $room_id->price*($data->adult+$data->kid);
-
         $data = new Reservation;
         $data->user_id = Auth::id();
         $data->room_id = $room_id;
@@ -61,6 +73,7 @@ class ReservationController extends Controller
         $data->checkout = $request->input('checkout');
         $data->status = $request->input('status');
         $data->IP = $_SERVER['REMOTE_ADDR'];
+       // dd($data);
         $data->save();
 
         return redirect()->route('user_reservation')->with('success','Reservation saved successfully');

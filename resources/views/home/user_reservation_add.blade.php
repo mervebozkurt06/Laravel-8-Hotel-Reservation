@@ -72,20 +72,26 @@
                     </div>
                     <div class="form-group">
                         <label>Check In</label>
-                        <input type="text" name="checkin"  data-parsley-trigger="change"   autocomplete="off" class="form-control">
+                        <input type="text" name="checkin" value="{{$checkin}}" data-parsley-trigger="change"   autocomplete="off" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Check Out</label>
-                        <input type="text" name="checkout"  data-parsley-trigger="change"   autocomplete="off" class="form-control">
+                        <input type="text" name="checkout" value="{{$checkout}}" data-parsley-trigger="change"   autocomplete="off" class="form-control">
                     </div>
+
                     <div class="form-group">
                         <label>Adult</label>
-                        <input type="text" name="adult" data-parsley-trigger="change"   autocomplete="off" class="form-control">
+                        <input type="text" name="adult" value="{{$adult}}"  data-parsley-trigger="change"   autocomplete="off" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Kid</label>
-                        <input type="text" name="kid" data-parsley-trigger="change"   autocomplete="off" class="form-control">
+                        <input type="text" name="kid"  value="{{$kid}}"  data-parsley-trigger="change"   autocomplete="off" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <label>Total</label>
+                        <input type="text" name="total"  value="{{$total}}"  data-parsley-trigger="change"   autocomplete="off" class="form-control">
+                    </div>
+
 
                     <div class="form-group">
                         <label>Status</label>

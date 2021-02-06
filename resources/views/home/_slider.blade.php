@@ -17,8 +17,8 @@
                             $i+=1;
                         @endphp
                         <!-- Slide One - Set the background image for this slide in the line below -->
-                            <div class="carousel-item @if($i==1) active" @endif style="background-image:  {{\Illuminate\Support\Facades\Storage::url($rs->image)}} ">
-                                <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-item @if($i==1) active" @endif style="background-image:  {{\Illuminate\Support\Facades\Storage::url($rs->image)}} " style="background-image: {{\Illuminate\Support\Facades\Storage::url($rs->image)}}">
+                                <div class="carousel-caption d-none d-md-block" >
                                     <img src="{{\Illuminate\Support\Facades\Storage::url($rs->image)}}">
                                     <h3>{{$rs->title}}</h3>
                                     <p>{{$rs->country}}</p>

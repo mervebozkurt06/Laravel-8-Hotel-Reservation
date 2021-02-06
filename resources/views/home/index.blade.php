@@ -12,6 +12,7 @@
 
 
 @section('content')
+
     @include('home._slider')
 
     <!-- Page Content -->
