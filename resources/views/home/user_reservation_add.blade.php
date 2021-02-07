@@ -92,20 +92,10 @@
                         <input type="text" name="total"  value="{{$total}}"  data-parsley-trigger="change"   autocomplete="off" class="form-control">
                     </div>
 
-
-                    <div class="form-group">
-                        <label>Status</label>
-                        <select name="status" class="form-control" id="input-select">
-                            <option>True</option>
-                            <option>False</option>
-                        </select>
-                    </div>
-
-
                     <div class="row">
                         <div class="col-sm-6 pl-0">
                             <p class="text-right">
-                                <button type="submit" class="btn btn-space btn-primary">Add hotel</button>
+                                <button type="submit" class="btn btn-space btn-primary">Pay Reservation</button>
                                 <button class="btn btn-space btn-secondary">Cancel</button>
                             </p>
                         </div>

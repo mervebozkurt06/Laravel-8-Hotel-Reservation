@@ -19,35 +19,19 @@
     <div class="container">
         <div class="about-main">
             <div class="row">
-                <div class="col-md-8 blog-right-side">
-                    <!-- Categories Widget -->
-                    <div class="card my-4">
-                        <h5 class="card-header">What are you looking for?</h5>
-                        <div class="card-body">
-                            <div class="row">
-                                @foreach($picked as $rs)
-                                    <div class="col-lg-1">
-                                        <ul class="list-unstyled mb-0">
-                                            <li>
-                                                <a href="#" class="mb-0">{{$rs->title}}</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 blog-right-side">
+
+                <div class="col-md-12 blog-right-side">
                     <!-- Search Widget -->
-                    <div class="card mb-4">
+                    <div class="card mb-12">
                         <h5 class="card-header">Search</h5>
                         <div class="card-body">
                             <div class="input-group">
                                 <form action="{{route('gethotel')}}" method="post">
                                     @csrf
                                 @livewire('search')
-                                <span class="input-group-btn"><button class="btn btn-secondary" type="submit">Go!</button></span>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="submit">Go!</button>
+                                </span>
                                 </form>
                                 @section('footerjs')
                                 @livewireScripts
