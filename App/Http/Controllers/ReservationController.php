@@ -19,6 +19,7 @@ class ReservationController extends Controller
     public function index()
     {
         $datalist = Reservation::where('user_id',Auth::id())->get();
+        //dd($datalist);
         return view('home.user_reservation',['datalist'=>$datalist]); //user_reservation.blade.php
     }
 
@@ -86,9 +87,11 @@ class ReservationController extends Controller
      * @param  \App\Models\Reservation  $reservation
      * @return \Illuminate\Http\Response
      */
-    public function show(Reservation $reservation)
+    public function show(Reservation $reservation,$id)
     {
-        //
+        $datalist = Reservation::where('user_id',Auth::id())->where('id',$id)->get();
+        //dd($datalist);
+        return view('home.user_reservation_show',['datalist'=>$datalist]); //user_reservation.blade.php
     }
 
     /**

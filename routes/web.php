@@ -102,6 +102,18 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 
     });
 
+    #Reservations
+    Route::prefix('reservation')->group(function (){
+        //Route assigned name "admin.user"...
+        Route::get('/',[\App\Http\Controllers\Admin\ReservationController::class,'index'])->name('admin_reservation');
+        Route::post('create/{hotel_id}/{room_id}',[\App\Http\Controllers\Admin\ReservationController::class,'create'])->name('admin_reservation_create');
+        Route::post('store/{hotel_id}/{room_id}',[\App\Http\Controllers\Admin\ReservationController::class,'store'])->name('admin_reservation_store');
+        Route::post('edit/{id}',[\App\Http\Controllers\Admin\ReservationController::class,'edit'])->name('admin_reservation_edit');
+        Route::get('update/{id}',[\App\Http\Controllers\Admin\ReservationController::class,'update'])->name('admin_reservation_update');
+        Route::get('delete/{id}',[\App\Http\Controllers\Admin\ReservationController::class,'destroy'])->name('admin_reservation_delete');
+        Route::get('show/{id}',[\App\Http\Controllers\Admin\ReservationController::class,'show'])->name('admin_reservation_show');
+
+    });
     #Setting
     Route::get('setting',[SettingController::class,'index'])->name('admin_setting');
     Route::post('setting/update',[SettingController::class,'update'])->name('admin_setting_update');
@@ -118,6 +130,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('show',[FaqController::class,'show'])->name('admin_faq_show');
 
     });
+
 });
 
 
@@ -151,6 +164,7 @@ Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
         Route::post('store/{hotel_id}/{room_id}',[ReservationController::class,'store'])->name('user_reservation_store');
         Route::post('update/{id}',[ReservationController::class,'update'])->name('user_reservation_update');
         Route::get('delete/{id}',[ReservationController::class,'destroy'])->name('user_reservation_delete');
+        Route::get('show/{id}',[ReservationController::class,'show'])->name('user_reservation_show');
     });
 
 

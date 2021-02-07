@@ -20,9 +20,6 @@
                         <a href="{{route('user_reservation')}}">My Reservations</a>
                     </li>
                     <li>
-                        <a href="#">My Messages</a>
-                    </li>
-                    <li>
                         <a href="{{route('logout')}}">Logout</a>
                     </li>
                 </ul>
