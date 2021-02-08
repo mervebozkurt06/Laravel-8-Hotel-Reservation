@@ -63,7 +63,7 @@
                             <a class="dropdown-item" href="/login">Login</a>
                             <a class="dropdown-item" href="{{route('register')}}">Join</a>
                         @else
-                            <a class="dropdown-item" href="{{route('myprofile')}}">{{ Auth::user()->name }} -> {{ Auth::user()->roles->pluck('name')}} </a>
+                            <a class="dropdown-item" href="{{route('myprofile')}}">{{ Auth::user()->name }}  </a>
 
                             <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
                         @endif

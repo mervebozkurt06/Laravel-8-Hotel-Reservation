@@ -20,18 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8d493f6-582c-4326-b929-04ecff6c6b0a" name="Default Changelist" comment="Authentication,Logged Out">
-      <change afterPath="$PROJECT_DIR$/App/Http/Middleware/CheckAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Models/Role.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_08_131844_create_roles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_08_132052_roles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_08_132438_create_role_user_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_08_132942_role_user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Http/Controllers/admin/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_roles.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Http/Controllers/admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/Controllers/admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,15 +185,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\admin" />
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\layouts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
       <recent name="C:\Php\LaravelHotelReservationProject\app\Http\Controllers" />
       <recent name="C:\Php\LaravelHotelReservationProject\app\Http\Controllers\front" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\admin" />
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\layouts" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug._blank.blade.php">
@@ -264,7 +261,7 @@
       <workItem from="1612622705519" duration="2132000" />
       <workItem from="1612632210678" duration="6774000" />
       <workItem from="1612706238096" duration="13146000" />
-      <workItem from="1612789375277" duration="4524000" />
+      <workItem from="1612789375277" duration="9919000" />
     </task>
     <task id="LOCAL-00001" summary="Index updated">
       <created>1608987855631</created>
@@ -511,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612724147149</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Role permissions (Admin/User)">
+      <created>1612794098667</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1612794098667</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +535,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Hotels CRUD" />
     <MESSAGE value="Hotel Detail Rich Text Editor(summernote)" />
     <MESSAGE value="Hotel Image Upload and Display" />
     <MESSAGE value="Hotel Image gallery" />
@@ -556,7 +559,8 @@
     <MESSAGE value="Reservations updated" />
     <MESSAGE value="Reservations" />
     <MESSAGE value="Reservations Admin Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reservations Admin Page" />
+    <MESSAGE value="Role permissions (Admin/User)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Role permissions (Admin/User)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="722" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609092468713">
@@ -599,10 +603,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608987427262" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612724151655">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612794110755">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612724151655" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612794110755" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1609092438094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
