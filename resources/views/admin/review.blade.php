@@ -59,7 +59,11 @@
                                                 @foreach($datalist as $rs)
                                                     <tr role="row" class="odd">
                                                         <td >{{$rs->id}}</td>
-                                                        <td >{{$rs->user->name}}</td>
+                                                        <td >
+                                                            <a href="{{route('admin_user_show',['id'=>$rs->user->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=800, height=700')">
+                                                                {{$rs->user->name}}
+                                                            </a>
+                                                        </td>
                                                         <td>
                                                             <a href="{{route('hotel',['id'=>$rs->hotel->id,'slug'=>$rs->hotel->slug])}}"> {{$rs->hotel->title}}</a>
                                                         </td>

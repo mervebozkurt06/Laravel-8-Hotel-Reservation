@@ -20,15 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8d493f6-582c-4326-b929-04ecff6c6b0a" name="Default Changelist" comment="Authentication,Logged Out">
-      <change afterPath="$PROJECT_DIR$/App/Http/Controllers/admin/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_roles.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Http/Controllers/admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/Controllers/admin/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/review.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/review.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -261,7 +255,7 @@
       <workItem from="1612622705519" duration="2132000" />
       <workItem from="1612632210678" duration="6774000" />
       <workItem from="1612706238096" duration="13146000" />
-      <workItem from="1612789375277" duration="9919000" />
+      <workItem from="1612789375277" duration="11361000" />
     </task>
     <task id="LOCAL-00001" summary="Index updated">
       <created>1608987855631</created>
@@ -515,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612794098667</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="User Role Management on Admin Panel">
+      <created>1612800074324</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1612800074324</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +536,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Hotel Detail Rich Text Editor(summernote)" />
     <MESSAGE value="Hotel Image Upload and Display" />
     <MESSAGE value="Hotel Image gallery" />
     <MESSAGE value="Settings" />
@@ -560,7 +560,8 @@
     <MESSAGE value="Reservations" />
     <MESSAGE value="Reservations Admin Page" />
     <MESSAGE value="Role permissions (Admin/User)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Role permissions (Admin/User)" />
+    <MESSAGE value="User Role Management on Admin Panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Role Management on Admin Panel" />
   </component>
   <component name="WindowStateProjectService">
     <state x="722" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609092468713">
@@ -603,10 +604,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608987427262" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612794110755">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612800077279">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612794110755" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612800077279" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1609092438094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
