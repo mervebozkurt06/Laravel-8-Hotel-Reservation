@@ -36,6 +36,7 @@
     <div class="card ">
         <div class="card-header text-center"><a href="../index.html"><img class="logo-img" src="{{ asset('assets')}}/admin/assets/images/logo.png" alt="logo"></a><span class="splash-description">Please enter your user information.</span></div>
         <div class="card-body">
+            @include('home.message')
             <form action="{{ route('admin_logincheck') }}" method="post">
                 @csrf
                 <div class="form-group">

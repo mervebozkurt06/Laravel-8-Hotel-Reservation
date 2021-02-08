@@ -56,12 +56,15 @@
                         @if (Auth::guest())LOGIN @else My Account @endif
 
                     </a>
+
+
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
                         @if (Auth::guest())
                             <a class="dropdown-item" href="/login">Login</a>
                             <a class="dropdown-item" href="{{route('register')}}">Join</a>
                         @else
-                            <a class="dropdown-item" href="{{route('myprofile')}}">{{ Auth::user()->name }}</a>
+                            <a class="dropdown-item" href="{{route('myprofile')}}">{{ Auth::user()->name }} -> {{ Auth::user()->roles->pluck('name')}} </a>
+
                             <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
                         @endif
 
