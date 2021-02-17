@@ -27,7 +27,7 @@
         <div class="card">
             <h5 class="card-header">Add Room for -> <b>{{$data->title}}</b></h5>
             <div class="card-body">
-                <form action="{{route('admin_room_store',['hotel_id'=>$data->id])}}" method="post" id="basicform" enctype="multipart/form-data">
+                <form action="{{route('user_room_store',['hotel_id'=>$data->id])}}" method="post" id="basicform" enctype="multipart/form-data">
                     @csrf
                     <div class="custom-file mb-3">
                         <input type="file" name="image" class="custom-file-input" id="customFile">
@@ -101,7 +101,7 @@
                                         <td >{{$rs->number}}</td>
                                         <td >{{$rs->status}}</td>
 
-                                        <td><a href="{{route('admin_room_delete',['id'=>$rs->id,'hotel_id'=>$data->id])}}" onclick="return confirm('Record will be delete! Are you sure?')">
+                                        <td><a href="{{route('user_room_delete',['id'=>$rs->id,'hotel_id'=>$data->id])}}" onclick="return confirm('Record will be delete! Are you sure?')">
                                                 <img src="{{asset('assets/admin/images')}}/delete.png" height="30"></a></td>
 
 

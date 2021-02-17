@@ -43,6 +43,7 @@
                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Star</th>
                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Image</th>
                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Image Gallery</th>
+                            <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Room Add</th>
                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 50px;">Status</th>
                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 52px;">Actions</th>
                             <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 52px;">Delete</th>
@@ -64,7 +65,13 @@
                                     @endif
                                 </td>
                                 <td ><a href="{{route('user_image_add',['hotel_id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100, height=700')">
-                                        <img src="{{asset('assets/admin/images')}}/gallery.png" height="30"></a> </td>
+                                        <img src="{{asset('assets/admin/images')}}/gallery.png" height="30"></a>
+                                </td>
+                                <td>
+                                    <a href="{{route('user_room_add',['hotel_id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100, height=700')">
+                                        <img src="{{asset('assets/admin/images')}}/room.png" height="30">
+                                    </a>
+                                </td>
                                 <td>{{$rs->status}}</td>
                                 <td>
                                     <a href="{{route('user_hotel_edit',['id'=>$rs->id])}}">

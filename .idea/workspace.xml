@@ -20,9 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8d493f6-582c-4326-b929-04ecff6c6b0a" name="Default Changelist" comment="Authentication,Logged Out">
+      <change afterPath="$PROJECT_DIR$/App/Http/Controllers/RoomController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/room_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Http/Controllers/admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/Controllers/admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/all-title-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/all-title-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/footer-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/footer-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reservation_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reservation_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reservations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reservations.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/room_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/room_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_hotel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_hotel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_hotel_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_hotel_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,22 +184,22 @@
     <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/home" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\admin" />
+      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\layouts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
       <recent name="C:\Php\LaravelHotelReservationProject\app\Http\Controllers" />
       <recent name="C:\Php\LaravelHotelReservationProject\app\Http\Controllers\front" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\admin" />
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\home" />
-      <recent name="C:\Php\LaravelHotelReservationProject\resources\views\layouts" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug._blank.blade.php">
@@ -255,7 +268,13 @@
       <workItem from="1612632210678" duration="6774000" />
       <workItem from="1612706238096" duration="13146000" />
       <workItem from="1612789375277" duration="11495000" />
-      <workItem from="1612872032767" duration="2228000" />
+      <workItem from="1612872032767" duration="2684000" />
+      <workItem from="1613043712752" duration="927000" />
+      <workItem from="1613128202461" duration="123000" />
+      <workItem from="1613128375558" duration="3076000" />
+      <workItem from="1613207136545" duration="1550000" />
+      <workItem from="1613319271025" duration="11085000" />
+      <workItem from="1613559844979" duration="1179000" />
     </task>
     <task id="LOCAL-00001" summary="Index updated">
       <created>1608987855631</created>
@@ -523,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612803215403</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="updates">
+      <created>1612901321809</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1612901321809</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +569,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Hotel Image Upload and Display" />
     <MESSAGE value="Hotel Image gallery" />
     <MESSAGE value="Settings" />
     <MESSAGE value="Relation Category Hotel One to Many" />
@@ -568,7 +593,8 @@
     <MESSAGE value="Reservations Admin Page" />
     <MESSAGE value="Role permissions (Admin/User)" />
     <MESSAGE value="User Role Management on Admin Panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Role Management on Admin Panel" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
   <component name="WindowStateProjectService">
     <state x="722" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609092468713">
@@ -579,10 +605,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608386816433" />
-    <state x="830" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612722071040">
+    <state x="830" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613560616535">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="830" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1612722071040" />
+    <state x="830" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613560616535" />
     <state x="894" y="340" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1610450533529">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -591,10 +617,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="528" y="272" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1608386825597" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1612636387133">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1613128323266">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612636387133" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1613128323266" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1609092424950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -607,14 +633,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="899" y="147" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1611402425397" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1608987427262">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1613559886740">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608987427262" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612803220663">
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1613559886740" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612901329775">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612803220663" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612901329775" />
     <state x="668" y="289" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1609092438094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

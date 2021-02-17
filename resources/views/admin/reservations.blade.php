@@ -49,7 +49,7 @@
                                                     <th rowspan="1" colspan="1" style="width: 52px;">Days</th>
                                                     <th rowspan="1" colspan="1" style="width: 52px;">Total</th>
                                                     <th rowspan="1" colspan="1" style="width: 52px;">Message</th>
-                                                    <th rowspan="1" colspan="1" style="width: 52px;">Note</th>
+
                                                     <th rowspan="1" colspan="1" style="width: 52px;">Status</th>
                                                     <th rowspan="1" colspan="1" style="width: 52px;">Edit</th>
                                                     <th rowspan="1" colspan="1" style="width: 52px;">Show</th>
@@ -66,7 +66,7 @@
                                                         <td>{{$rs->days}}</td>
                                                         <td>{{$rs->total}}</td>
                                                         <td>{{$rs->message}}</td>
-                                                        <td>{{$rs->note}}</td>
+
                                                         <td>
                                                             {{$rs->status}}
                                                         </td>

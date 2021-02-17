@@ -1,27 +1,16 @@
 @php
     $setting = \App\Http\Controllers\HomeController::getSetting();
 @endphp
-
-
 @extends('layouts.home')
-
 @section('title',$setting->title)
 @section('description'){{ $setting->description }}@endsection
-
 @section('keywords',$setting->keywords)
-
-
 @section('content')
-
     @include('home._slider')
-
-    <!-- Page Content -->
     <div class="container">
         <div class="about-main">
             <div class="row">
-
                 <div class="col-md-12 blog-right-side">
-                    <!-- Search Widget -->
                     <div class="card mb-12">
                         <h5 class="card-header">What are you looking for?</h5>
                         <div class="card-body">
@@ -40,8 +29,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
             <!-- /.row -->
         </div>
@@ -64,7 +51,7 @@
                             @endphp
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="{{asset('assets')}}/#">{{$rs->title}}</a>
+                                    <a href="{{route('hotel',['id'=>$rs->id,'slug'=>$rs->slug])}}">{{$rs->title}}</a>
 
                                     <h5>{{$countreview}} Review(s)</h5>
                                     <h5><i class="fas fa-star">{{$avgrev}}</i></h5>
@@ -99,7 +86,7 @@
                             @endphp
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="{{asset('assets')}}/#">{{$rs->title}}</a>
+                                    <a href="{{route('hotel',['id'=>$rs->id,'slug'=>$rs->slug])}}">{{$rs->title}}</a>
 
                                     <h5>{{$countreview}} Review(s)</h5>
                                     <h5><i class="fas fa-star">{{$avgrev}}</i></h5>

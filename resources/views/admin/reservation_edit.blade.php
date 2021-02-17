@@ -25,7 +25,7 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
                 <div class="card">
-                    <h5 class="card-header">Review Detail</h5>
+                    <h5 class="card-header">Reservation Detail</h5>
                     @include('home.message')
 
                     <form action="{{route('admin_reservation_edit',['id'=>$data->id])}}" method="post" id="basicform" enctype="multipart/form-data">

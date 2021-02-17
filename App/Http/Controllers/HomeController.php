@@ -48,9 +48,6 @@ class HomeController extends Controller
         $daily = Hotel::select('id','title','image','slug')->limit(3)->get();
         $last = Hotel::select('id','title','address','image','country','slug')->limit(6)->get();
         $picked = Category::select('id','title')->limit(5)->get();
-
-        #print_r($slider);
-        #exit();
         $data= [
             'setting'=>$setting,
             'slider'=>$slider,
@@ -59,7 +56,6 @@ class HomeController extends Controller
             'picked'=>$picked,
             'page'=>'home'
         ];
-
         return view('home.index',$data);
     }
 

@@ -164,6 +164,16 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
     Route::get('/profile',[UserController::class,'index'])->name('userprofile');
 
+    //Room Gallery
+    Route::prefix('room')->group(function (){
+        //Route assigned name "admin.user".
+        Route::get('create/{hotel_id}',[RoomController::class,'create'])->name('user_room_add'); //hotel id
+        Route::post('store/{hotel_id}',[RoomController::class,'store'])->name('user_room_store'); //hotel id
+        Route::get('delete/{id}/{hotel_id}',[RoomController::class,'destroy'])->name('user_room_delete'); //image id
+        Route::get('show',[RoomController::class,'show'])->name('user_room_show');
+
+    });
+
     #Hotel adding to userpage
     Route::prefix('hotel')->group(function (){
         //Route assigned name "admin.user"...

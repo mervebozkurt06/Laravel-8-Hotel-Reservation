@@ -126,13 +126,7 @@
                         <label>Slug</label>
                         <input type="text" name="slug" data-parsley-trigger="change"   autocomplete="off" class="form-control">
                     </div>
-                    <div class="form-group">
-                        <label>Status</label>
-                        <select name="status" class="form-control" id="input-select">
-                            <option>True</option>
-                            <option>False</option>
-                        </select>
-                    </div>
+
 
 
 
